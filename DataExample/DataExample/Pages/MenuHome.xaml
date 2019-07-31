@@ -6,7 +6,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Order="Primary" Text="Reset Data" Clicked="Reset_Button_OnClicked"/>
     </ContentPage.ToolbarItems>
-
+<!--This is a comment-->
     <ContentPage.Content>
         <Grid>
             <Image Source="background.jpg" Aspect="AspectFill"/>
