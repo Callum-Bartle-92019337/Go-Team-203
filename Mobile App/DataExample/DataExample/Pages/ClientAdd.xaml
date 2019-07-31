@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataExample.Pages.ClientAdd">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Text="Finalise" Clicked="Add_OnClicked"/>
+        <ToolbarItem Order="Primary" Text="Cancel" Clicked="Back_Button"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Add Client Page!"
+                       HorizontalOptions="CenterAndExpand" />
+
+                <Label Text="Client Name"/>
+                <Entry x:Name="ClientNameEntry" Placeholder="Joe"/>
+
+                <Label Text="Phone Number"/>
+                <Entry x:Name="ClientPhoneEntry" Placeholder="000 0000 000" Keyboard="Telephone"/>
+
+                <Label Text="Address"/>
+                <Entry x:Name="ClientAddressEntry" Placeholder="123 made up street"/>
+
+                <Label Text="Email"/>
+                <Entry x:Name="ClientEmailEntry" Placeholder="Email@address.com" Keyboard="Email"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
