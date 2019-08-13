@@ -16,13 +16,13 @@ namespace DataExample.Pages
             CreateTables();
         }
 
-        private void Supervisor_Button_OnClicked(object sender, EventArgs e)
+        private void Activities_Page_Button_OnClicked(object sender, EventArgs e)
         {
             //Simple Navigation
             Navigation.PushAsync(new MenuSupervisor());
         }
 
-        private void Merchandiser_Button_OnClicked(object sender, EventArgs e)
+        private void Phrase_Book_Page_Button_OnClicked(object sender, EventArgs e)
         {
             //Simple Navigation
             Navigation.PushAsync(new MenuMerchandiser());
@@ -181,6 +181,11 @@ namespace DataExample.Pages
             conn1.Insert(merch);
 
             conn1.Dispose();
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

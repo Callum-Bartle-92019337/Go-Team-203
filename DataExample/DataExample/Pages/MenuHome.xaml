@@ -12,10 +12,10 @@
             <Image Source="background.jpg" Aspect="AspectFill"/>
             <StackLayout>
                 <ActivityIndicator x:Name="actInd" IsVisible="False" HorizontalOptions="Center"/>
-                <Label Text="Company App" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" TextColor="White"/>
+                <Label Text="Culture Master" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" TextColor="White"/>
                 <Grid x:Name="menuButtons">
-                    <Button Text="Supervisor" Clicked="Supervisor_Button_OnClicked" BackgroundColor="#5992FF" Grid.Row="2" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
-                    <Button Text="Merchandiser" Clicked="Merchandiser_Button_OnClicked" BackgroundColor="#5992FF" Grid.Row="5" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
+                    <Button Text="Activities Page" Clicked="Activities_Page_Button_OnClicked" BackgroundColor="#5992FF" Grid.Row="2" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
+                    <Button Text="Phrase Book Page" Clicked="Phrase_Book_Page_Button_OnClicked" BackgroundColor="#5992FF" Grid.Row="5" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
                 </Grid>
             </StackLayout>
         </Grid>
