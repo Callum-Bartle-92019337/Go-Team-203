@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataExample.Pages.ClientDisplay">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Text="Edit" Clicked="Edit_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Client View" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" TextColor="Black"/>
+            <Label Text="{Binding Id , StringFormat='ID: {0}'}" FontAttributes="Bold"/>
+            <Label Text="Client"/>
+            <Label Text="{Binding Name , StringFormat='{0}'}"/>
+            <Label Text="Number"/>
+            <Label Text="{Binding Number , StringFormat='{0}'}"/>
+            <Label Text="{Binding Address , StringFormat='Address: {0}'}"/>
+            <Label Text="{Binding Email , StringFormat='Email: {0}'}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

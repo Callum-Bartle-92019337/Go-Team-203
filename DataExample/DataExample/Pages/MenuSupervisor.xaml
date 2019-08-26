@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataExample"
+             x:Class="DataExample.MenuSupervisor">
+    <Grid>
+        <Image Source="background.jpg" Aspect="AspectFill"/>
+        <StackLayout>
+        <!-- Place new controls here -->
+            <Label Text="Supervisors Page" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" TextColor="White"/>
+            
+            <Grid x:Name="menuButtons">
+                <Button Text="Tickets List" Clicked="Tickets_OnClicked" BackgroundColor="#5992FF" Grid.Row="1" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
+                <Button Text="Clients List" Clicked="Client_OnClick" BackgroundColor="#5992FF" Grid.Row="3" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
+                <Button Text="Merchandisers List" Clicked="Merchandiser_OnClick" BackgroundColor="#5992FF" Grid.Row="5" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
+            </Grid>
+        </StackLayout>
+        </Grid>
+
+</ContentPage>

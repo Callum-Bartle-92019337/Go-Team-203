@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataExample.MenuMerchandiser">
+    <ContentPage Title="Common Phrases" >
+        <Grid>
+            <Image Source="commonBG.jpg" Aspect="AspectFill"/>
+            <StackLayout>
+                <Label Text="COMMON PHRASES" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" TextColor="White"/>
+                <Grid x:Name="menuButtons1">
+                    <!--<Button Text="Cans For Free" Clicked="Merchandiser1_OnClicked" BackgroundColor="#5992FF" Grid.Row="1" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
+                    <Button Text="Fresh Milk" Clicked="Merchandiser2_OnClicked" BackgroundColor="#5992FF" Grid.Row="3" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
+                    <Button Text="Boxes For Boxing" Clicked="Merchandiser3_OnClicked" BackgroundColor="#5992FF" Grid.Row="5" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>-->
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </ContentPage>
+
+    <ContentPage Title="Food Phrases" >
+        <Grid>
+            <Image Source="food.jpg" Aspect="AspectFill"/>
+            <StackLayout>
+                <Label Text="FOOD PHRASES" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" TextColor="White"/>
+                <Grid x:Name="menuButtons2">
+                    <!--<Button Text="Cans For Free" Clicked="Merchandiser1_OnClicked" BackgroundColor="#5992FF" Grid.Row="1" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
+                    <Button Text="Fresh Milk" Clicked="Merchandiser2_OnClicked" BackgroundColor="#5992FF" Grid.Row="3" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
+                    <Button Text="Boxes For Boxing" Clicked="Merchandiser3_OnClicked" BackgroundColor="#5992FF" Grid.Row="5" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>-->
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </ContentPage>
+
+    <ContentPage Title="Site Phrases" >
+        <Grid>
+            <Image Source="placeBG.jpg" Aspect="AspectFill"/>
+            <StackLayout>
+                <Label Text="SITE PHRASES" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" TextColor="White"/>
+                <Grid x:Name="menuButtons3">
+                    <!--<Button Text="Cans For Free" Clicked="Merchandiser1_OnClicked" BackgroundColor="#5992FF" Grid.Row="1" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
+                    <Button Text="Fresh Milk" Clicked="Merchandiser2_OnClicked" BackgroundColor="#5992FF" Grid.Row="3" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
+                    <Button Text="Boxes For Boxing" Clicked="Merchandiser3_OnClicked" BackgroundColor="#5992FF" Grid.Row="5" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>-->
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </ContentPage>
+</TabbedPage>

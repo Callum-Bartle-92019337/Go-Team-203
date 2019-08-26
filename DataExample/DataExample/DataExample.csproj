@@ -1,0 +1,103 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.264807" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Pages\ClientAdd.xaml.cs">
+      <DependentUpon>ClientAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\MerchandiserDisplay.xaml.cs">
+      <DependentUpon>MerchandiserDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\TicketAdd.xaml.cs">
+      <DependentUpon>TicketAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\ClientDisplay.xaml.cs">
+      <DependentUpon>ClientDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\ClientList.xaml.cs">
+      <DependentUpon>ClientList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\ClientEdit.xaml.cs">
+      <DependentUpon>ClientEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\TicketEdit.xaml.cs">
+      <DependentUpon>TicketEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\MenuHome.xaml.cs">
+      <DependentUpon>MenuHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\MenuMerchandiser.xaml.cs">
+      <DependentUpon>MenuMerchandiser.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\MerchandiserList.xaml.cs">
+      <DependentUpon>MerchandiserList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\TicketList.xaml.cs">
+      <DependentUpon>TicketList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\TicketDisplay.xaml.cs">
+      <DependentUpon>TicketDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\MenuSupervisor.xaml.cs">
+      <DependentUpon>MenuSupervisor.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Pages\ClientAdd.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\MerchandiserDisplay.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\TicketAdd.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\ClientDisplay.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\ClientList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\ClientEdit.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\TicketEdit.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\MenuHome.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\MenuMerchandiser.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\MerchandiserList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\TicketDisplay.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\TicketList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
