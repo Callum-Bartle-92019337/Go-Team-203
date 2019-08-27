@@ -1,8 +1,10 @@
-﻿using SQLite;//Important
+﻿using SQLite;
 
-namespace DataExample
+//Important
+
+namespace DataExample.DataModel
 {
-    class Client
+    public class Client
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }//Primary key ID
