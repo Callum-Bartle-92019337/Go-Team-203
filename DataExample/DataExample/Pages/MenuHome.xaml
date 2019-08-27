@@ -3,16 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DataExample.Pages.MenuHome">
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Order="Primary" Text="Reset Data" Clicked="Reset_Button_OnClicked"/>
-    </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
         <Grid>
             <Image Source="background.jpg" Aspect="AspectFill"/>
             <StackLayout>
                 <ActivityIndicator x:Name="actInd" IsVisible="False" HorizontalOptions="Center"/>
-                <Label Text="Company App" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" TextColor="White"/>
+                <Label Text="Culture Master" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" TextColor="White"/>
+                <Image Source="logo.png" />
                 <Grid x:Name="menuButtons">
                     <Button Text="Activities" Clicked="Activities_Button_OnClicked" BackgroundColor="#5992FF" Grid.Row="2" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
                     <Button Text="Phrases" Clicked="Phrases_Button_OnClicked" BackgroundColor="#5992FF" Grid.Row="5" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>

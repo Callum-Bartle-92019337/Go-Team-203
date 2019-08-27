@@ -17,23 +17,5 @@ namespace DataExample
 		{
 			InitializeComponent ();
 	    }
-
-	    private void Merchandiser1_OnClicked(object sender, EventArgs e)
-	    {
-            //Simple navigation and pass our merchant number, NOT our ID
-	        Navigation.PushAsync(new TicketList("1"));
-        }
-
-	    private void Merchandiser2_OnClicked(object sender, EventArgs e)
-	    {
-	        //Simple navigation and pass our merchant number, NOT our ID
-            Navigation.PushAsync(new TicketList("2"));
-        }
-
-	    private void Merchandiser3_OnClicked(object sender, EventArgs e)
-	    {
-	        //Simple navigation and pass our merchant number, NOT our ID
-            Navigation.PushAsync(new TicketList("3"));
-        }
     }
 }

@@ -3,42 +3,111 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DataExample.MenuMerchandiser">
     <ContentPage Title="Common Phrases" >
+        <ContentPage.ToolbarItems>
+            <ToolbarItem Text="COMMON PHRASES"></ToolbarItem>
+        </ContentPage.ToolbarItems>
         <Grid>
             <Image Source="commonBG.jpg" Aspect="AspectFill"/>
             <StackLayout>
-                <Label Text="COMMON PHRASES" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" TextColor="White"/>
+                <Frame Margin="3" Padding="4">
+                    <Label Text="  English  |  Japanese  |   Sound   " HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" />
+                </Frame>
                 <Grid x:Name="menuButtons1">
-                    <!--<Button Text="Cans For Free" Clicked="Merchandiser1_OnClicked" BackgroundColor="#5992FF" Grid.Row="1" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
-                    <Button Text="Fresh Milk" Clicked="Merchandiser2_OnClicked" BackgroundColor="#5992FF" Grid.Row="3" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
-                    <Button Text="Boxes For Boxing" Clicked="Merchandiser3_OnClicked" BackgroundColor="#5992FF" Grid.Row="5" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>-->
+                    <ListView x:Name="unfinishedTicketsList">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition />
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Column="0" Grid.Row="1" Text="{Binding Id , StringFormat='Ticket No#: {0}'}" FontAttributes="Bold"/>
+                                        <Label Grid.Column="1" Grid.Row="1"  Text="{Binding Notes , StringFormat='Notes: {0}'}" TextColor="Black"/>
+                                        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding DateDue , StringFormat='Date Due: {0}'}" TextColor="Black" HorizontalOptions="Center"/>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </Grid>
             </StackLayout>
         </Grid>
     </ContentPage>
 
     <ContentPage Title="Food Phrases" >
+        <ContentPage.ToolbarItems>
+            <ToolbarItem Text="FOOD PHRASES"></ToolbarItem>
+        </ContentPage.ToolbarItems>
         <Grid>
             <Image Source="food.jpg" Aspect="AspectFill"/>
             <StackLayout>
-                <Label Text="FOOD PHRASES" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" TextColor="White"/>
+                <Frame Margin="3" Padding="4">
+                    <Label Text="  English  |  Japanese  |   Sound   " HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" />
+                </Frame>
                 <Grid x:Name="menuButtons2">
-                    <!--<Button Text="Cans For Free" Clicked="Merchandiser1_OnClicked" BackgroundColor="#5992FF" Grid.Row="1" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
-                    <Button Text="Fresh Milk" Clicked="Merchandiser2_OnClicked" BackgroundColor="#5992FF" Grid.Row="3" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
-                    <Button Text="Boxes For Boxing" Clicked="Merchandiser3_OnClicked" BackgroundColor="#5992FF" Grid.Row="5" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>-->
+                    <ListView x:Name="unfinishedTicketsList2">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition />
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Column="0" Grid.Row="1" Text="{Binding Id , StringFormat='Ticket No#: {0}'}" FontAttributes="Bold"/>
+                                        <Label Grid.Column="1" Grid.Row="1"  Text="{Binding Notes , StringFormat='Notes: {0}'}" TextColor="Black"/>
+                                        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding DateDue , StringFormat='Date Due: {0}'}" TextColor="Black" HorizontalOptions="Center"/>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </Grid>
             </StackLayout>
         </Grid>
     </ContentPage>
 
     <ContentPage Title="Site Phrases" >
+        <ContentPage.ToolbarItems>
+            <ToolbarItem Text="SITE PHRASES"></ToolbarItem>
+        </ContentPage.ToolbarItems>
         <Grid>
             <Image Source="placeBG.jpg" Aspect="AspectFill"/>
             <StackLayout>
-                <Label Text="SITE PHRASES" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" TextColor="White"/>
+                <Frame Margin="3" Padding="4">
+                    <Label Text="  English  |  Japanese  |   Sound   " HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" />
+                </Frame>
                 <Grid x:Name="menuButtons3">
-                    <!--<Button Text="Cans For Free" Clicked="Merchandiser1_OnClicked" BackgroundColor="#5992FF" Grid.Row="1" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
-                    <Button Text="Fresh Milk" Clicked="Merchandiser2_OnClicked" BackgroundColor="#5992FF" Grid.Row="3" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
-                    <Button Text="Boxes For Boxing" Clicked="Merchandiser3_OnClicked" BackgroundColor="#5992FF" Grid.Row="5" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>-->
+                    <ListView x:Name="unfinishedTicketsList3">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition />
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Column="0" Grid.Row="1" Text="{Binding Id , StringFormat='Ticket No#: {0}'}" FontAttributes="Bold"/>
+                                        <Label Grid.Column="1" Grid.Row="1"  Text="{Binding Notes , StringFormat='Notes: {0}'}" TextColor="Black"/>
+                                        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding DateDue , StringFormat='Date Due: {0}'}" TextColor="Black" HorizontalOptions="Center"/>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </Grid>
             </StackLayout>
         </Grid>
