@@ -1,9 +1,11 @@
 ﻿using System;
-using SQLite;//Important
+using SQLite;
 
-namespace DataExample
+//Important
+
+namespace DataExample.DataModel
 {
-    class Ticket
+    public class Ticket
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }//Primary key ticket ID 
