@@ -5,12 +5,13 @@
 
 
     <ContentPage.Content>
+        
         <Grid>
             <Image Source="background.jpg" Aspect="AspectFill"/>
             <StackLayout>
                 <ActivityIndicator x:Name="actInd" IsVisible="False" HorizontalOptions="Center"/>
                 <Label Text="Culture Master" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" TextColor="White"/>
-                <Image Source="logo.png" />
+                <Image Source="logo.png"/>
                 <Grid x:Name="menuButtons">
                     <Button Text="Activities" Clicked="Activities_Button_OnClicked" BackgroundColor="#5992FF" Grid.Row="2" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>
                     <Button Text="Phrases" Clicked="Phrases_Button_OnClicked" BackgroundColor="#5992FF" Grid.Row="5" TextColor="white" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14"/>

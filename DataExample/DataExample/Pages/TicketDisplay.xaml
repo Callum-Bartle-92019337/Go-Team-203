@@ -15,15 +15,15 @@
                 <Label Text="{Binding Id , StringFormat='Ticket No#: {0000}'}" FontAttributes="Bold"/>
                 <Grid>
                     <Label Grid.Row="0" Grid.Column="0"  Text="Date Created:"/>
-                    <Label Grid.Row="0" Grid.Column="1"  Text="{Binding Date, StringFormat='{0:MMMM dd, yyyy}'}"/>
+                    <Label Grid.Row="0" Grid.Column="1"  Text="{Binding Date, StringFormat=',{0:MMMM dd, yyyy}'}"/>
                     <Label Grid.Row="1" Grid.Column="0"  Text="Date Due:"/>
-                    <Label Grid.Row="1" Grid.Column="1"  Text="{Binding DateDue, StringFormat='{0:MMMM dd, yyyy}'}"/>
+                    <Label Grid.Row="1" Grid.Column="1"  Text="{Binding DateDue, StringFormat=',{0:MMMM dd, yyyy}'}"/>
                 </Grid>
                 <Label Text="{Binding Merchandiser , StringFormat='Merchandiser: {0}'}"/>
                 <Label Text="{Binding Completed , StringFormat='Completed: {0}'}"/>
                 <Label Text="Ticket Notes:" FontAttributes="Bold"/>
                 <Frame Margin="3" Padding="4">
-                    <Label Text="{Binding Notes , StringFormat='{0}'}"/>
+                    <Label Text="{Binding Notes , StringFormat=',{0}'}"/>
                 </Frame>
                 <Grid x:Name="buttonContainer">
                     <Button Grid.Row="0" Grid.Column="0" Text="Start" Clicked="StartButton_Click" BackgroundColor="#5992FF" Font="bold"/>

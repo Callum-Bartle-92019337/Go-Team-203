@@ -14,23 +14,33 @@ namespace DataExample
         {
             InitializeComponent();
         }
-
-        private async void Tickets_OnClicked(object sender, EventArgs e)
+        private async void Delete_Clicked(object sender, EventArgs e)
         {
-            //Simple navigation and pass our merchant number "Supervisor" to see all tickets
-            await Navigation.PushAsync(new TicketList("Supervisor"));
+           ////Check if we want to delete the ticket
+           // bool answer = await DisplayAlert("Ticket: " + SelectedTicket.Id, "Delete Ticket?", "DELETE", "Cancel");
+           // //If yes, delete ticket logic
+           // if (answer)
+           // {
+           //     //Mark for deletion, Prevents the timer saving it from deletion in OnDisappearing()
+           //     Deletion = true;
+           //     //Connect to the database
+           //     var conn = new SQLite.SQLiteConnection(App.DB_PATH);
+           //     //Remove  the ticket from the table
+           //     conn.Delete<Ticket>(SelectedTicket.Id);
+           //     //Close connection
+           //     conn.Dispose();
+           //     //Back button logic
+           //     GlobalMethods.Globals.PopAsync_Button(sender, e);
+           // }
         }
 
-        private async void Merchandiser_OnClick(object sender, EventArgs e)
+        private async void Edit_Clicked(object sender, EventArgs e)
         {
-            //Simple navigation
-            await Navigation.PushAsync(new MerchandiserList());
+            ////Go to the edit ticket page and pass the ticket ID
+            //await Navigation.PushAsync(new TicketEdit(SelectedTicket.Id));
         }
-
-        private async void Client_OnClick(object sender, EventArgs e)
+        private async void Add_Clicked(object sender, EventArgs e)
         {
-            //Simple navigation
-            await Navigation.PushAsync(new ClientList());
         }
-    }
+        }
 }
