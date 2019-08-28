@@ -36,5 +36,11 @@ namespace DataExample.Pages
             Navigation.PushAsync(new MenuMerchandiser());
         }
 
+        private void New_Button_OnClicked(object sender, EventArgs e)
+        {
+            //Simple Navigation
+            Navigation.PushAsync(new ActivityImageDisplay());
+        }
+
     }
 }

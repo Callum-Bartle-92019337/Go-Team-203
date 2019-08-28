@@ -24,6 +24,9 @@
     <Compile Update="Pages\ClientAdd.xaml.cs">
       <DependentUpon>ClientAdd.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Pages\ActivityImageDisplay.xaml.cs">
+      <DependentUpon>ActivityImageDisplay.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Pages\MerchandiserDisplay.xaml.cs">
       <DependentUpon>MerchandiserDisplay.xaml</DependentUpon>
     </Compile>
