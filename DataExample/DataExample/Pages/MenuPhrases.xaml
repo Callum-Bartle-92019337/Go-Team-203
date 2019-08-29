@@ -9,27 +9,25 @@
         <Grid>
             <Image Source="commonBG.jpg" Aspect="AspectFill"/>
             <StackLayout>
-                <Frame Margin="3" Padding="4">
-                    <Label Text="  English  |  Japanese  |   Phonetic   " HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" />
+                <Frame>
+                    <Grid>
+                        <Label Grid.Column="0" Text="English" />
+                        <Label Grid.Column="1"  Text="Japanese" />
+                        <Label Grid.Column="2"  Text="Phonetic" />
+                    </Grid>
                 </Frame>
                 <Grid>
-                    <ListView x:Name="commonPhrases">
+                    <ListView x:Name="commonPhrases" RowHeight="80">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition />
-                                            <ColumnDefinition />
-                                        </Grid.ColumnDefinitions>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition />
-                                            <RowDefinition />
-                                        </Grid.RowDefinitions>
-                                        <Label Grid.Column="0" Grid.Row="1" Text="{Binding Id , StringFormat='Ticket No#: {0}'}" FontAttributes="Bold"/>
-                                        <Label Grid.Column="1" Grid.Row="1"  Text="{Binding Notes , StringFormat='Notes: {0}'}" TextColor="Black"/>
-                                        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding DateDue , StringFormat='Date Due: {0}'}" TextColor="Black" HorizontalOptions="Center"/>
-                                    </Grid>
+                                    <Frame Opacity="0.3">
+                                        <Grid>
+                                            <Label Grid.Row="0" Text="{Binding EnglishPhrase}" FontAttributes="Bold"/>
+                                            <Label Grid.Row="1"  Text="{Binding JapanesePhrase}"/>
+                                            <Label Grid.Row="2"  Text="{Binding PhoneticPhrase}"/>
+                                        </Grid>
+                                    </Frame>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
@@ -46,27 +44,25 @@
         <Grid>
             <Image Source="food.jpg" Aspect="AspectFill"/>
             <StackLayout>
-                <Frame Margin="3" Padding="4">
-                    <Label Text="  English  |  Japanese  |   Phonetic   " HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" />
+                <Frame>
+                    <Grid>
+                        <Label Grid.Column="0" Text="English" />
+                        <Label Grid.Column="1"  Text="Japanese" />
+                        <Label Grid.Column="2"  Text="Phonetic" />
+                    </Grid>
                 </Frame>
                 <Grid>
-                    <ListView x:Name="foodPhrases">
+                    <ListView x:Name="foodPhrases" RowHeight="80">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition />
-                                            <ColumnDefinition />
-                                        </Grid.ColumnDefinitions>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition />
-                                            <RowDefinition />
-                                        </Grid.RowDefinitions>
-                                        <Label Grid.Column="0" Grid.Row="1" Text="{Binding Id , StringFormat='Ticket No#: {0}'}" FontAttributes="Bold"/>
-                                        <Label Grid.Column="1" Grid.Row="1"  Text="{Binding Notes , StringFormat='Notes: {0}'}" TextColor="Black"/>
-                                        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding DateDue , StringFormat='Date Due: {0}'}" TextColor="Black" HorizontalOptions="Center"/>
-                                    </Grid>
+                                    <Frame Opacity="0.4">
+                                        <Grid>
+                                            <Label Grid.Row="0" Text="{Binding EnglishPhrase}" FontAttributes="Bold"/>
+                                            <Label Grid.Row="1"  Text="{Binding JapanesePhrase}"/>
+                                            <Label Grid.Row="2"  Text="{Binding PhoneticPhrase}"/>
+                                        </Grid>
+                                    </Frame>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
@@ -83,23 +79,25 @@
         <Grid>
             <Image Source="placeBG.jpg" Aspect="AspectFill"/>
             <StackLayout>
-                <Frame Margin="3" Padding="4">
+                <Frame>
                     <Grid>
-                        <Label Grid.Column="0" Text="English" Font="Italic, Bold, Large"/>
-                        <Label Grid.Column="1"  Text="Japanese" Font="Italic, Bold, Large"/>
-                        <Label Grid.Column="2"  Text="Phonetic" Font="Italic, Bold, Large"/>
+                        <Label Grid.Column="0" Text="English" />
+                        <Label Grid.Column="1"  Text="Japanese" />
+                        <Label Grid.Column="2"  Text="Phonetic" />
                     </Grid>
                 </Frame>
                 <Grid>
-                    <ListView x:Name="travelPhrases">
+                    <ListView x:Name="travelPhrases" RowHeight="80">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <Grid>
-                                        <Label Grid.Row="0" Text="{Binding EnglishPhrase}" FontAttributes="Bold"/>
-                                        <Label Grid.Row="1"  Text="{Binding JapanesePhrase}"/>
-                                        <Label Grid.Row="2"  Text="{Binding PhoneticPhrase}"/>
-                                    </Grid>
+                                    <Frame Opacity="0.5">
+                                        <Grid>
+                                            <Label Grid.Row="0" Text="{Binding EnglishPhrase}" FontAttributes="Bold"/>
+                                            <Label Grid.Row="1"  Text="{Binding JapanesePhrase}"/>
+                                            <Label Grid.Row="2"  Text="{Binding PhoneticPhrase}"/>
+                                        </Grid>
+                                    </Frame>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
