@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DataExample.MenuMerchandiser">
+             x:Class="DataExample.Pages.MenuPhrases">
     <ContentPage Title="Common Phrases" >
         <ContentPage.ToolbarItems>
             <ToolbarItem Text="COMMON PHRASES"></ToolbarItem>
@@ -10,10 +10,10 @@
             <Image Source="commonBG.jpg" Aspect="AspectFill"/>
             <StackLayout>
                 <Frame Margin="3" Padding="4">
-                    <Label Text="  English  |  Japanese  |   Sound   " HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" />
+                    <Label Text="  English  |  Japanese  |   Phonetic   " HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" />
                 </Frame>
-                <Grid x:Name="menuButtons1">
-                    <ListView x:Name="unfinishedTicketsList">
+                <Grid>
+                    <ListView x:Name="commonPhrases">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
@@ -47,10 +47,10 @@
             <Image Source="food.jpg" Aspect="AspectFill"/>
             <StackLayout>
                 <Frame Margin="3" Padding="4">
-                    <Label Text="  English  |  Japanese  |   Sound   " HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" />
+                    <Label Text="  English  |  Japanese  |   Phonetic   " HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" />
                 </Frame>
-                <Grid x:Name="menuButtons2">
-                    <ListView x:Name="unfinishedTicketsList2">
+                <Grid>
+                    <ListView x:Name="foodPhrases">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
@@ -76,33 +76,29 @@
         </Grid>
     </ContentPage>
 
-    <ContentPage Title="Site Phrases" >
+    <ContentPage Title="Travel Phrases" >
         <ContentPage.ToolbarItems>
-            <ToolbarItem Text="SITE PHRASES"></ToolbarItem>
+            <ToolbarItem Text="TRAVEL PHRASES"></ToolbarItem>
         </ContentPage.ToolbarItems>
         <Grid>
             <Image Source="placeBG.jpg" Aspect="AspectFill"/>
             <StackLayout>
                 <Frame Margin="3" Padding="4">
-                    <Label Text="  English  |  Japanese  |   Sound   " HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" />
+                    <Grid>
+                        <Label Grid.Column="0" Text="English" Font="Italic, Bold, Large"/>
+                        <Label Grid.Column="1"  Text="Japanese" Font="Italic, Bold, Large"/>
+                        <Label Grid.Column="2"  Text="Phonetic" Font="Italic, Bold, Large"/>
+                    </Grid>
                 </Frame>
-                <Grid x:Name="menuButtons3">
-                    <ListView x:Name="unfinishedTicketsList3">
+                <Grid>
+                    <ListView x:Name="travelPhrases">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition />
-                                            <ColumnDefinition />
-                                        </Grid.ColumnDefinitions>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition />
-                                            <RowDefinition />
-                                        </Grid.RowDefinitions>
-                                        <Label Grid.Column="0" Grid.Row="1" Text="{Binding Id , StringFormat='Ticket No#: {0}'}" FontAttributes="Bold"/>
-                                        <Label Grid.Column="1" Grid.Row="1"  Text="{Binding Notes , StringFormat='Notes: {0}'}" TextColor="Black"/>
-                                        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding DateDue , StringFormat='Date Due: {0}'}" TextColor="Black" HorizontalOptions="Center"/>
+                                        <Label Grid.Row="0" Text="{Binding EnglishPhrase}" FontAttributes="Bold"/>
+                                        <Label Grid.Row="1"  Text="{Binding JapanesePhrase}"/>
+                                        <Label Grid.Row="2"  Text="{Binding PhoneticPhrase}"/>
                                     </Grid>
                                 </ViewCell>
                             </DataTemplate>

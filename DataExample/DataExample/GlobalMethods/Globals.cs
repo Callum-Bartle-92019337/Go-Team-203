@@ -7,6 +7,7 @@ namespace DataExample.GlobalMethods
     public class BindingObject
     {
         //Global stuff
+        public string FILE_PATH { get; set; }
         public string Font1 { get; set; }
         public string Font2{ get; set; }
         public string Font3 { get; set; }
@@ -25,9 +26,7 @@ namespace DataExample.GlobalMethods
 
 
         //Database stuff
-        public Client MyClient { get; set; } = null;
-        public Merchandiser MyMerchandiser { get; set; } = null;
-        public Ticket MyTicket { get; set; } = null;
+        public Activities Activities { get; set; } = null;
     }
     public static class Globals
     {

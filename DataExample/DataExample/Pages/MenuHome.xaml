@@ -13,7 +13,7 @@
                 <Image Source="logo.png" />
                 <Button Text="Activities" Clicked="Activities_Button_OnClicked" BackgroundColor="{Binding ColorBg1}" Grid.Row="2" TextColor="{Binding ColorTx1}" HeightRequest="40" BorderRadius="20" FontFamily="{Binding Font1}" FontSize="{Binding FontMed}"/>
                 <Button Text="Phrases" Clicked="Phrases_Button_OnClicked" BackgroundColor="{Binding ColorBg1}" Grid.Row="4" TextColor="{Binding ColorTx1}" HeightRequest="40" BorderRadius="20" FontFamily="{Binding Font1}" FontSize="{Binding FontMed}"/>
-                <Button Text="New Button" Clicked="New_Button_OnClicked" BackgroundColor="{Binding ColorBg1}" Grid.Row="5" TextColor="{Binding ColorTx1}" HeightRequest="40" BorderRadius="20" FontFamily="{Binding Font1}" FontSize="{Binding FontMed}"/>
+                <Button Text="Admin Button" Clicked="New_Button_OnClicked" BackgroundColor="{Binding ColorBg1}" Grid.Row="5" TextColor="{Binding ColorTx1}" HeightRequest="40" BorderRadius="20" FontFamily="{Binding Font1}" FontSize="{Binding FontMed}"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

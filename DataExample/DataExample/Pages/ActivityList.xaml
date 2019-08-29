@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataExample.Pages.ActivityList">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Activities" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" />
+
+            <!--<Image Source="background.png" 
+                   BackgroundColor="Transparent" 
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand"/>-->
+            <ListView x:Name="activitiesList" ItemSelected="ActivitiesListView_OnItemSelected" BackgroundColor="Transparent">
+                <ListView.RowHeight>
+                    <OnPlatform x:TypeArguments="x:Int32" Android="136" />
+                </ListView.RowHeight>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="8">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition>
+                                        <ColumnDefinition.Width>
+                                            <OnPlatform x:TypeArguments="GridLength" Android="144"/>
+                                        </ColumnDefinition.Width>
+                                    </ColumnDefinition>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding Photo}" />
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.Padding>
+                                        <OnPlatform x:TypeArguments="Thickness" Android="8,2,0,4" />
+                                    </Grid.Padding>
+                                    <Grid.RowSpacing>
+                                        <OnPlatform x:TypeArguments="x:Double" Android="4" />
+                                    </Grid.RowSpacing>
+                                    <Label Text="{Binding Title}" FontSize="Large" LineBreakMode="WordWrap" />
+                                    <Label Text="{Binding Content}" FontSize="Small" Grid.Row="1" />
+                                </Grid>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

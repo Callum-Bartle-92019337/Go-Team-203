@@ -20,26 +20,26 @@ namespace DataExample.Pages
             //SelectedTicket = conn.Query<Ticket>("select * from Ticket where Id = " + 1)[0];
             //conn.Dispose();
 
-            //App.GLOBAL_BINDINGS.MyTicket = SelectedTicket;
-            BindingContext = App.GLOBAL_BINDINGS;
+            //App.G.MyTicket = SelectedTicket;
+            BindingContext = App.G;
         }
 
         private void Activities_Button_OnClicked(object sender, EventArgs e)
         {
             //Simple Navigation
-            Navigation.PushAsync(new MenuSupervisor());
+            Navigation.PushAsync(new ActivityList());
         }
 
         private void Phrases_Button_OnClicked(object sender, EventArgs e)
         {
             //Simple Navigation
-            Navigation.PushAsync(new MenuMerchandiser());
+            Navigation.PushAsync(new MenuPhrases());
         }
 
         private void New_Button_OnClicked(object sender, EventArgs e)
         {
             //Simple Navigation
-            Navigation.PushAsync(new ActivityImageDisplay());
+            Navigation.PushAsync(new MenuAdmin());
         }
 
     }

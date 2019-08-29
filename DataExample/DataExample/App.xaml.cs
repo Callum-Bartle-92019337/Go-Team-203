@@ -3,6 +3,7 @@ using DataExample.GlobalMethods;
 using DataExample.Pages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.IO;//Important
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace DataExample
@@ -11,16 +12,18 @@ namespace DataExample
     {
         //Local string to store the database path
         public static string DB_PATH = string.Empty;
-        public static BindingObject GLOBAL_BINDINGS;
+        public static BindingObject G;
 
         //Add a new constructor for the database
-        public App(string dbPath)
+        public App(string FileStoragePath)
         {
             InitializeComponent();
-            DB_PATH = dbPath;
-            GLOBAL_BINDINGS = 
+            //DB_PATH = Path.Combine(FileStoragePath, "DatabaseProject.sqlite");
+            DB_PATH = FileStoragePath;
+            G = 
                 new BindingObject
                 {
+                    FILE_PATH = Path.Combine(FileStoragePath, "UserImages/"),
                     Font1 = "san-serif-medium",
                     Font2 = "Cursive",
                     Font3 = "Impact",
@@ -41,8 +44,8 @@ namespace DataExample
             //Important to make as navigation
             MainPage = new NavigationPage(new MenuHome())
             {
-                BarBackgroundColor = Color.FromHex(GLOBAL_BINDINGS.ColorBg1),
-                BarTextColor = Color.FromHex(GLOBAL_BINDINGS.ColorTx1),
+                BarBackgroundColor = Color.FromHex(G.ColorBg1),
+                BarTextColor = Color.FromHex(G.ColorTx1),
             };
         }
     }

@@ -20,13 +20,12 @@ namespace DataExample.Droid
 
             //Important Remember
             string fileLocation = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            string fullPath = Path.Combine(fileLocation, "DatabaseProject.sqlite");
-
+            string dbPath = Path.Combine(fileLocation, "DatabaseProject.sqlite");
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
             //Pass constructor
-            LoadApplication(new App(fullPath));
+            LoadApplication(new App(dbPath));
         }
     }
 }

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataExample.Pages.ActivityDisplay">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="{Binding Title}"/>
+                <Image Source="{Binding Photo} " />
+                <Frame Margin="3" Padding="4">
+                    <Label Text="{Binding Content}"/>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

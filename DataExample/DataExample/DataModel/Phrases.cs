@@ -13,5 +13,6 @@ namespace DataExample.DataModel
         public string EnglishPhrase { get; set; }//
         public string JapanesePhrase { get; set; }//
         public string PhoneticPhrase { get; set; }//
+        public int Type { get; set; }//1 Travel, 2 Food, 3 Common
     }
 }
