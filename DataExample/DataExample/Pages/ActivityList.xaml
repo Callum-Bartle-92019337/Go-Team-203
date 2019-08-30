@@ -1,15 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DataExample.Pages.ActivityList">
     <ContentPage.Content>
         <Grid>
 
-            <Image Source="background.png" Aspect="AspectFill"/>
+            <Image Source="background.png" Aspect="AspectFill" />
             <StackLayout>
                 <Label Text="Activities" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" />
                 <Grid>
-                    <ListView x:Name="activitiesList" ItemSelected="ActivitiesListView_OnItemSelected" BackgroundColor="Transparent" Opacity="1">
+                    <ListView x:Name="ActivitiesList" ItemSelected="ActivitiesListView_OnItemSelected"
+                              BackgroundColor="Transparent" Opacity="1">
                         <ListView.RowHeight>
                             <OnPlatform x:TypeArguments="x:Int32" Android="136" />
                         </ListView.RowHeight>
@@ -20,7 +22,7 @@
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition>
                                                 <ColumnDefinition.Width>
-                                                    <OnPlatform x:TypeArguments="GridLength" Android="144"/>
+                                                    <OnPlatform x:TypeArguments="GridLength" Android="144" />
                                                 </ColumnDefinition.Width>
                                             </ColumnDefinition>
                                             <ColumnDefinition Width="*" />

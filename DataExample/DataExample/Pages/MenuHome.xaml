@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DataExample.Pages.MenuHome">
@@ -6,14 +7,19 @@
 
     <ContentPage.Content>
         <Grid>
-            <Image Source="background.jpg" Aspect="AspectFill"/>
+            <Image Source="background.jpg" Aspect="AspectFill" />
             <StackLayout>
-                <ActivityIndicator x:Name="actInd" IsVisible="False" HorizontalOptions="Center"/>
-                <Label Text="Culture Master" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" TextColor="{Binding ColorTx1}"/>
+                <Label Text="Culture Master" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large"
+                       TextColor="#FFFFFF" />
                 <Image Source="logo.png" />
-                <Button Text="Activities" Clicked="Activities_Button_OnClicked" BackgroundColor="{Binding ColorBg1}" Grid.Row="2" TextColor="{Binding ColorTx1}" HeightRequest="40" BorderRadius="20" FontFamily="{Binding Font1}" FontSize="{Binding FontMed}"/>
-                <Button Text="Phrases" Clicked="Phrases_Button_OnClicked" BackgroundColor="{Binding ColorBg1}" Grid.Row="4" TextColor="{Binding ColorTx1}" HeightRequest="40" BorderRadius="20" FontFamily="{Binding Font1}" FontSize="{Binding FontMed}"/>
-                <Button Text="Admin Button" Clicked="New_Button_OnClicked" BackgroundColor="{Binding ColorBg1}" Grid.Row="5" TextColor="{Binding ColorTx1}" HeightRequest="40" BorderRadius="20" FontFamily="{Binding Font1}" FontSize="{Binding FontMed}"/>
+                <Button Text="Activities" Clicked="Activities_Button_OnClicked" BackgroundColor="#5992FF"
+                        TextColor="#FFFFFF" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium"
+                        FontSize="14" />
+                <Button Text="Phrases" Clicked="Phrases_Button_OnClicked" BackgroundColor="#5992FF" TextColor="#FFFFFF"
+                        HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14" />
+                <Button Text="Admin Button" Clicked="New_Button_OnClicked" BackgroundColor="#5992FF"
+                        TextColor="#FFFFFF" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium"
+                        FontSize="14" />
             </StackLayout>
         </Grid>
     </ContentPage.Content>

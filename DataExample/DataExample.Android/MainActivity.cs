@@ -1,17 +1,18 @@
-﻿using System;
-
+﻿using System.IO;
 using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
-using System.IO;//Important
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android;
+using Environment = System.Environment;
+
+//Important
 
 namespace DataExample.Droid
 {
-    [Activity(Label = "DataExample", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    [Activity(Label = "DataExample", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true,
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    public class MainActivity : FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -19,10 +20,10 @@ namespace DataExample.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             //Important Remember
-            string fileLocation = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            string dbPath = Path.Combine(fileLocation, "DatabaseProject.sqlite");
+            var fileLocation = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            var dbPath = Path.Combine(fileLocation, "DatabaseProject.sqlite");
             base.OnCreate(savedInstanceState);
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            Forms.Init(this, savedInstanceState);
 
             //Pass constructor
             LoadApplication(new App(dbPath));

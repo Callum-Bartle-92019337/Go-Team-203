@@ -1,31 +1,40 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DataExample.Pages.MenuPhrases">
-    <ContentPage Title="Common Phrases" >
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="DataExample.Pages.MenuPhrases">
+    <ContentPage Title="Common Phrases">
         <ContentPage.ToolbarItems>
-            <ToolbarItem Text="COMMON PHRASES"></ToolbarItem>
+            <ToolbarItem Text="COMMON PHRASES" />
         </ContentPage.ToolbarItems>
         <Grid>
-            <Image Source="commonBG.jpg" Aspect="AspectFill"/>
+            <Image Source="commonBG.jpg" Aspect="AspectFill" />
             <StackLayout>
                 <Frame Padding="4" HeightRequest="30">
                     <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" Text="English" />
-                        <Label Grid.Column="1"  Text="Japanese" />
-                        <Label Grid.Column="2"  Text="Phonetic" />
+                        <Label Grid.Column="1" Text="Japanese" />
+                        <Label Grid.Column="2" Text="Phonetic" />
                     </Grid>
                 </Frame>
                 <Grid>
-                    <ListView x:Name="commonPhrases" HasUnevenRows="True">
+                    <ListView x:Name="CommonPhrases" HasUnevenRows="True">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <Frame Opacity="0.4" Margin="0,0,0,10">
                                         <Grid>
-                                            <Label Grid.Row="0" Text="{Binding EnglishPhrase}" HorizontalOptions="CenterAndExpand" TextColor="Black" Font="Bold"/>
-                                            <Label Grid.Row="1" Text="{Binding JapanesePhrase}" HorizontalOptions="CenterAndExpand" TextColor="Black" />
-                                            <Label Grid.Row="2" Text="{Binding PhoneticPhrase}" HorizontalOptions="CenterAndExpand" TextColor="Black" />
+                                            <Label Grid.Row="0" Text="{Binding EnglishPhrase}"
+                                                   HorizontalOptions="CenterAndExpand" TextColor="Black" Font="Bold" />
+                                            <Label Grid.Row="1" Text="{Binding JapanesePhrase}"
+                                                   HorizontalOptions="CenterAndExpand" TextColor="Black" />
+                                            <Label Grid.Row="2" Text="{Binding PhoneticPhrase}"
+                                                   HorizontalOptions="CenterAndExpand" TextColor="Black" />
                                         </Grid>
                                     </Frame>
                                 </ViewCell>
@@ -37,30 +46,33 @@
         </Grid>
     </ContentPage>
 
-    <ContentPage Title="Food Phrases" >
+    <ContentPage Title="Food Phrases">
         <ContentPage.ToolbarItems>
-            <ToolbarItem Text="FOOD PHRASES"></ToolbarItem>
+            <ToolbarItem Text="FOOD PHRASES" />
         </ContentPage.ToolbarItems>
         <Grid>
-            <Image Source="food.jpg" Aspect="AspectFill"/>
+            <Image Source="food.jpg" Aspect="AspectFill" />
             <StackLayout>
                 <Frame Padding="4" HeightRequest="30">
                     <Grid>
                         <Label Grid.Column="0" Text="English" />
-                        <Label Grid.Column="1"  Text="Japanese" />
-                        <Label Grid.Column="2"  Text="Phonetic" />
+                        <Label Grid.Column="1" Text="Japanese" />
+                        <Label Grid.Column="2" Text="Phonetic" />
                     </Grid>
                 </Frame>
                 <Grid>
-                    <ListView x:Name="foodPhrases" HasUnevenRows="True">
+                    <ListView x:Name="FoodPhrases" HasUnevenRows="True">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <Frame Opacity="0.4" Margin="0,0,0,10">
                                         <Grid>
-                                            <Label Grid.Row="0" Text="{Binding EnglishPhrase}" HorizontalOptions="CenterAndExpand" TextColor="Black" Font="Bold"/>
-                                            <Label Grid.Row="1" Text="{Binding JapanesePhrase}" HorizontalOptions="CenterAndExpand" TextColor="Black" />
-                                            <Label Grid.Row="2" Text="{Binding PhoneticPhrase}" HorizontalOptions="CenterAndExpand" TextColor="Black" />
+                                            <Label Grid.Row="0" Text="{Binding EnglishPhrase}"
+                                                   HorizontalOptions="CenterAndExpand" TextColor="Black" Font="Bold" />
+                                            <Label Grid.Row="1" Text="{Binding JapanesePhrase}"
+                                                   HorizontalOptions="CenterAndExpand" TextColor="Black" />
+                                            <Label Grid.Row="2" Text="{Binding PhoneticPhrase}"
+                                                   HorizontalOptions="CenterAndExpand" TextColor="Black" />
                                         </Grid>
                                     </Frame>
                                 </ViewCell>
@@ -72,30 +84,33 @@
         </Grid>
     </ContentPage>
 
-    <ContentPage Title="Travel Phrases" >
+    <ContentPage Title="Travel Phrases">
         <ContentPage.ToolbarItems>
-            <ToolbarItem Text="TRAVEL PHRASES"></ToolbarItem>
+            <ToolbarItem Text="TRAVEL PHRASES" />
         </ContentPage.ToolbarItems>
         <Grid>
-            <Image Source="placeBG.jpg" Aspect="AspectFill"/>
+            <Image Source="placeBG.jpg" Aspect="AspectFill" />
             <StackLayout>
                 <Frame Padding="4">
                     <Grid HeightRequest="30">
                         <Label Grid.Column="0" Text="English" />
-                        <Label Grid.Column="1"  Text="Japanese" />
-                        <Label Grid.Column="2"  Text="Phonetic" />
+                        <Label Grid.Column="1" Text="Japanese" />
+                        <Label Grid.Column="2" Text="Phonetic" />
                     </Grid>
                 </Frame>
                 <Grid>
-                    <ListView x:Name="travelPhrases" HasUnevenRows="True">
+                    <ListView x:Name="TravelPhrases" HasUnevenRows="True">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <Frame Opacity="0.4" Margin="0,0,0,10">
                                         <Grid>
-                                            <Label Grid.Row="0" Text="{Binding EnglishPhrase}" HorizontalOptions="CenterAndExpand" TextColor="Black" Font="Bold"/>
-                                            <Label Grid.Row="1" Text="{Binding JapanesePhrase}" HorizontalOptions="CenterAndExpand" TextColor="Black" />
-                                            <Label Grid.Row="2" Text="{Binding PhoneticPhrase}" HorizontalOptions="CenterAndExpand" TextColor="Black" />
+                                            <Label Grid.Row="0" Text="{Binding EnglishPhrase}"
+                                                   HorizontalOptions="CenterAndExpand" TextColor="Black" Font="Bold" />
+                                            <Label Grid.Row="1" Text="{Binding JapanesePhrase}"
+                                                   HorizontalOptions="CenterAndExpand" TextColor="Black" />
+                                            <Label Grid.Row="2" Text="{Binding PhoneticPhrase}"
+                                                   HorizontalOptions="CenterAndExpand" TextColor="Black" />
                                         </Grid>
                                     </Frame>
                                 </ViewCell>
