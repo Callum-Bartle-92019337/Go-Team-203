@@ -7,20 +7,20 @@
 
     <ContentPage.Content>
         <Grid>
+
             <Image Source="background.jpg" Aspect="AspectFill" />
             <StackLayout>
-                <Label Text="Culture Master" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large"
-                       TextColor="#FFFFFF" />
+                <Label Text="Culture Master" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" TextColor="#FFFFFF"/>
+                <Grid>
+                    <Button Text="" Clicked="Admin1_OnClicked" Released="Admin1_OnReleased" WidthRequest="50" HeightRequest="50" BorderRadius="25" VerticalOptions="Center"  HorizontalOptions="Center" BackgroundColor="#0000FF" Grid.Row="0" Grid.Column="0"/>
+                    <Button Text="" Clicked="Admin2_OnClicked" Released="Admin2_OnReleased" WidthRequest="50" HeightRequest="50" BorderRadius="25" VerticalOptions="Center"  HorizontalOptions="Center" BackgroundColor="#0000FF" Grid.Row="0" Grid.Column="2"/>
+                </Grid>
                 <Image Source="logo.png" />
                 <Button Text="Activities" Clicked="Activities_Button_OnClicked" BackgroundColor="#5992FF"
                         TextColor="#FFFFFF" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium"
                         FontSize="14" />
                 <Button Text="Phrases" Clicked="Phrases_Button_OnClicked" BackgroundColor="#5992FF" TextColor="#FFFFFF"
                         HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14" />
-                <Button Text="C" Clicked="Admin1_OnClicked" Released="Admin1_OnReleased" BackgroundColor="#5992FF"
-                        TextColor="#FFFFFF" WidthRequest="40" HeightRequest="40" BorderRadius="20"/>
-                <Button Text="M" Clicked="Admin2_OnClicked" Released="Admin2_OnReleased" BackgroundColor="#5992FF"
-                        TextColor="#FFFFFF" WidthRequest="40" HeightRequest="40" BorderRadius="20" />
             </StackLayout>
         </Grid>
     </ContentPage.Content>
