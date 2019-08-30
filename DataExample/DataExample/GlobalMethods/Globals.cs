@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using DataExample.DataModel;
-using Java.Lang;
+
 using Xamarin.Forms;
 
 namespace DataExample.GlobalMethods

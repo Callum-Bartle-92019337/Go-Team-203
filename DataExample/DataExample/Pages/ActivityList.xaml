@@ -16,6 +16,7 @@
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
+                                    <Frame Opacity="0.6" Padding="0" Margin="4">
                                     <Grid Padding="8">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition>
@@ -26,25 +27,22 @@
                                             <ColumnDefinition Width="*" />
                                         </Grid.ColumnDefinitions>
                                         <Image Source="{Binding Photo}" />
-                                        <Grid Grid.Column="1">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="Auto" />
-                                                <RowDefinition Height="*" />
-                                            </Grid.RowDefinitions>
-                                            <Grid.Padding>
-                                                <OnPlatform x:TypeArguments="Thickness" Android="8,2,0,4" />
-                                            </Grid.Padding>
-                                            <Grid.RowSpacing>
-                                                <OnPlatform x:TypeArguments="x:Double" Android="4" />
-                                            </Grid.RowSpacing>
-                                            <Frame Opacity="0.6" Padding="0" Margin="0">
-                                                <Label Text="{Binding Title}" FontSize="Large" LineBreakMode="WordWrap" />
-                                            </Frame>
-                                            <Frame Grid.Row="1" Opacity="0.6" Padding="0" Margin="0">
-                                                <Label Text="{Binding Content}" FontSize="Small" />
-                                            </Frame>
+                                            <Grid Grid.Column="1">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="*" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.Padding>
+                                                    <OnPlatform x:TypeArguments="Thickness" Android="8,2,0,4" />
+                                                </Grid.Padding>
+                                                <Grid.RowSpacing>
+                                                    <OnPlatform x:TypeArguments="x:Double" Android="4" />
+                                                </Grid.RowSpacing>
+                                                <Label Grid.Row="0" Text="{Binding Title}" FontSize="Large" LineBreakMode="WordWrap" />
+                                                <Label Grid.Row="1" Text="{Binding Content}" FontSize="Small" />
+                                            </Grid>
                                         </Grid>
-                                    </Grid>
+                                 </Frame>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
