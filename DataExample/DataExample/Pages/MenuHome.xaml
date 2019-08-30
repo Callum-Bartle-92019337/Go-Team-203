@@ -17,7 +17,10 @@
                         FontSize="14" />
                 <Button Text="Phrases" Clicked="Phrases_Button_OnClicked" BackgroundColor="#5992FF" TextColor="#FFFFFF"
                         HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium" FontSize="14" />
-                <Button Text="Admin Button" Clicked="New_Button_OnClicked" BackgroundColor="#5992FF"
+                <Button Text="Admin Button1" Clicked="New_Button1_OnClicked" BackgroundColor="#5992FF"
+                        TextColor="#FFFFFF" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium"
+                        FontSize="14" />
+                <Button Text="Admin Button2" Clicked="New_Button2_OnClicked" BackgroundColor="#5992FF"
                         TextColor="#FFFFFF" HeightRequest="40" BorderRadius="20" FontFamily="san-serif-medium"
                         FontSize="14" />
             </StackLayout>

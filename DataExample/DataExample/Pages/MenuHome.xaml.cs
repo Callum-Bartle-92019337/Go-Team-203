@@ -24,10 +24,21 @@ namespace DataExample.Pages
             Navigation.PushAsync(new MenuPhrases());
         }
 
-        private void New_Button_OnClicked(object sender, EventArgs e)
+        private void New_Button1_OnClicked(object sender, EventArgs e)
         {
             //Simple Navigation
-            Navigation.PushAsync(new MenuAdmin());
+           // Navigation.PushAsync(new MenuAdmin());
+        }
+
+        private void New_Button2_OnClicked(object sender, EventArgs e)
+        {
+            //Simple Navigation
+           // Navigation.PushAsync(new MenuAdmin());
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }
