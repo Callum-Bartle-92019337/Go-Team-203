@@ -20,8 +20,8 @@ namespace DataExample
             //Important to make as navigation
             MainPage = new NavigationPage(new MenuHome())
             {
-                BarBackgroundColor = Color.FromHex("#5992FF"),
-                BarTextColor = Color.FromHex("#FFFFFF")
+               // BarBackgroundColor = Color.FromHex("ffe5c1"),
+            //    BarTextColor = Color.FromHex("#FFFFFF")
             };
         }
     }

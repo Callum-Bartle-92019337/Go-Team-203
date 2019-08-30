@@ -9,12 +9,12 @@
             <Image Source="background.png" Aspect="AspectFill" />
             <ScrollView>
                 <StackLayout Opacity="1">
-                    <Frame Margin="2" Padding="2" Opacity="0.6">
-                        <Label Text="{Binding Title}" Font="Bold, Large" />
+                    <Frame Margin="2" Padding="2" BackgroundColor="#7FFFFFFF">
+                        <Label Text="{Binding Title}" TextColor="Black" Font="Bold, Large" />
                     </Frame>
                     <Image Source="{Binding Photo} " />
-                    <Frame Margin="3" Padding="4" Opacity="0.6">
-                        <Label Text="{Binding Content}" />
+                    <Frame Margin="3" Padding="4" BackgroundColor="#7FFFFFFF">
+                        <Label Text="{Binding Content}" TextColor="Black"/>
                     </Frame>
                 </StackLayout>
             </ScrollView>

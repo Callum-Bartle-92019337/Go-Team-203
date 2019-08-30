@@ -27,7 +27,7 @@
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <Frame Opacity="0.4" Margin="0,0,0,10">
+                                    <Frame BackgroundColor="#7FFFFFFF" Margin="0,0,0,10">
                                         <Grid>
                                             <Label Grid.Row="0" Text="{Binding EnglishPhrase}"
                                                    HorizontalOptions="CenterAndExpand" TextColor="Black" Font="Bold" />
@@ -65,7 +65,7 @@
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <Frame Opacity="0.4" Margin="0,0,0,10">
+                                    <Frame BackgroundColor="#7FFFFFFF" Margin="0,0,0,10">
                                         <Grid>
                                             <Label Grid.Row="0" Text="{Binding EnglishPhrase}"
                                                    HorizontalOptions="CenterAndExpand" TextColor="Black" Font="Bold" />
@@ -103,7 +103,7 @@
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <Frame Opacity="0.4" Margin="0,0,0,10">
+                                    <Frame BackgroundColor="#7FFFFFFF" Margin="0,0,0,10">
                                         <Grid>
                                             <Label Grid.Row="0" Text="{Binding EnglishPhrase}"
                                                    HorizontalOptions="CenterAndExpand" TextColor="Black" Font="Bold" />

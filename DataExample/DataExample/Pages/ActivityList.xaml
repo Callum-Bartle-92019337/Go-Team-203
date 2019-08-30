@@ -18,8 +18,9 @@
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <Frame Opacity="0.6" Padding="0" Margin="4">
-                                        <Grid Padding="8">
+                                    <Frame BackgroundColor="#7FFFFFFF" Padding="0" Margin="4">
+                                        <Grid Padding="8"  >
+
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition>
                                                     <ColumnDefinition.Width>
@@ -40,9 +41,9 @@
                                                 <Grid.RowSpacing>
                                                     <OnPlatform x:TypeArguments="x:Double" Android="4" />
                                                 </Grid.RowSpacing>
-                                                <Label Grid.Row="0" Text="{Binding Title}" FontSize="Large"
+                                                <Label Grid.Row="0" Text="{Binding Title}" TextColor="Black" FontSize="Large"
                                                        LineBreakMode="WordWrap" />
-                                                <Label Grid.Row="1" Text="{Binding Content}" FontSize="Small" />
+                                                <Label Grid.Row="1" Text="{Binding Content}" TextColor="Black" FontSize="Small" />
                                             </Grid>
                                         </Grid>
                                     </Frame>
