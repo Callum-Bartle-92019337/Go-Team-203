@@ -12,8 +12,8 @@
             <StackLayout>
                 <Label Text="Culture Master" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" TextColor="#FFFFFF"/>
                 <Grid>
-                    <Button Text="" Clicked="Admin1_OnClicked" Released="Admin1_OnReleased" WidthRequest="50" HeightRequest="50" BorderRadius="25" VerticalOptions="Center"  HorizontalOptions="Center" BackgroundColor="#0000FF" Grid.Row="0" Grid.Column="0"/>
-                    <Button Text="" Clicked="Admin2_OnClicked" Released="Admin2_OnReleased" WidthRequest="50" HeightRequest="50" BorderRadius="25" VerticalOptions="Center"  HorizontalOptions="Center" BackgroundColor="#0000FF" Grid.Row="0" Grid.Column="2"/>
+                    <Button Text="" Clicked="Admin1_OnClicked" Released="Admin1_OnReleased" WidthRequest="50" HeightRequest="50" BorderRadius="25" VerticalOptions="Center"  HorizontalOptions="Center" BackgroundColor="#000A0A67" Grid.Row="0" Grid.Column="0"/>
+                    <Button Text="" Clicked="Admin2_OnClicked" Released="Admin2_OnReleased" WidthRequest="50" HeightRequest="50" BorderRadius="25" VerticalOptions="Center"  HorizontalOptions="Center" BackgroundColor="#00080871" Grid.Row="0" Grid.Column="2"/>
                 </Grid>
                 <Image Source="logo.png" />
                 <Button Text="Activities" Clicked="Activities_Button_OnClicked" BackgroundColor="#5992FF"
