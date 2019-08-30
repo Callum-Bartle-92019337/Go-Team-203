@@ -7,6 +7,9 @@ namespace DataExample.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuHome : ContentPage
     {
+        private bool Admin1 { get; set; }
+        private bool Admin2 { get; set; }
+
         public MenuHome()
         {
             InitializeComponent();
@@ -24,21 +27,35 @@ namespace DataExample.Pages
             Navigation.PushAsync(new MenuPhrases());
         }
 
-        private void New_Button1_OnClicked(object sender, EventArgs e)
+        private void Admin1_OnClicked(object sender, EventArgs e)
         {
-            //Simple Navigation
-           // Navigation.PushAsync(new MenuAdmin());
+            Admin1 = true;
+            ButtonChecker();
         }
 
-        private void New_Button2_OnClicked(object sender, EventArgs e)
+
+        private void Admin2_OnClicked(object sender, EventArgs e)
         {
-            //Simple Navigation
-           // Navigation.PushAsync(new MenuAdmin());
+            Admin2 = true;
+            ButtonChecker();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void Admin1_OnReleased(object sender, EventArgs e)
         {
+            Admin1 = false;
+        }
 
+        private void Admin2_OnReleased(object sender, EventArgs e)
+        {
+            Admin2 = false;
+        }
+        
+        private void ButtonChecker()
+        {
+            if (Admin1 && Admin2)
+            {
+            Navigation.PushAsync(new MenuAdmin());
+            }
         }
     }
 }

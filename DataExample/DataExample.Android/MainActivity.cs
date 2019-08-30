@@ -6,8 +6,6 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Environment = System.Environment;
 
-//Important
-
 namespace DataExample.Droid
 {
     [Activity(Label = "DataExample", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true,
