@@ -9,19 +9,23 @@
         <Grid>
             <Image Source="commonBG.jpg" Aspect="AspectFill"/>
             <StackLayout>
-                <Frame Padding="4">
-                    <Label Text="  English  |  Japanese  |   Phonetic   " HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" />
+                <Frame Padding="4" HeightRequest="30">
+                    <Grid>
+                        <Label Grid.Column="0" Text="English" />
+                        <Label Grid.Column="1"  Text="Japanese" />
+                        <Label Grid.Column="2"  Text="Phonetic" />
+                    </Grid>
                 </Frame>
                 <Grid>
-                    <ListView x:Name="commonPhrases"  RowHeight="130">
+                    <ListView x:Name="commonPhrases" HasUnevenRows="True">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <Frame Opacity="0.4" Margin="0,0,0,10">
                                         <Grid>
-                                            <Label Grid.Row="0" Text="{Binding EnglishPhrase}" Font="Bold, Large" HorizontalOptions="CenterAndExpand"   TextColor="Black" />
-                                            <Label Grid.Row="1" Text="{Binding JapanesePhrase}" Font="Bold, Medium" HorizontalOptions="CenterAndExpand"   TextColor="Black" />
-                                            <Label Grid.Row="2" Text="{Binding PhoneticPhrase}" Font="Bold, Medium" HorizontalOptions="CenterAndExpand"   TextColor="Black" />
+                                            <Label Grid.Row="0" Text="{Binding EnglishPhrase}" HorizontalOptions="CenterAndExpand" TextColor="Black" Font="Bold"/>
+                                            <Label Grid.Row="1" Text="{Binding JapanesePhrase}" HorizontalOptions="CenterAndExpand" TextColor="Black" />
+                                            <Label Grid.Row="2" Text="{Binding PhoneticPhrase}" HorizontalOptions="CenterAndExpand" TextColor="Black" />
                                         </Grid>
                                     </Frame>
                                 </ViewCell>
@@ -40,21 +44,25 @@
         <Grid>
             <Image Source="food.jpg" Aspect="AspectFill"/>
             <StackLayout>
-                <Frame Padding="4">
-                    <Label Text="  English  |  Japanese  |   Phonetic   " HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" />
+                <Frame Padding="4" HeightRequest="30">
+                    <Grid>
+                        <Label Grid.Column="0" Text="English" />
+                        <Label Grid.Column="1"  Text="Japanese" />
+                        <Label Grid.Column="2"  Text="Phonetic" />
+                    </Grid>
                 </Frame>
                 <Grid>
-                    <ListView x:Name="foodPhrases"  RowHeight="130">
+                    <ListView x:Name="foodPhrases" HasUnevenRows="True">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <Frame Opacity="0.4" Margin="0,0,0,10">
                                         <Grid>
-                                            <Label Grid.Row="0" Text="{Binding EnglishPhrase}" Font="Bold, Large" HorizontalOptions="CenterAndExpand"   TextColor="Black" />
-                                            <Label Grid.Row="1" Text="{Binding JapanesePhrase}" Font="Bold, Medium" HorizontalOptions="CenterAndExpand"   TextColor="Black" />
-                                            <Label Grid.Row="2" Text="{Binding PhoneticPhrase}" Font="Bold, Medium" HorizontalOptions="CenterAndExpand"   TextColor="Black" />
+                                            <Label Grid.Row="0" Text="{Binding EnglishPhrase}" HorizontalOptions="CenterAndExpand" TextColor="Black" Font="Bold"/>
+                                            <Label Grid.Row="1" Text="{Binding JapanesePhrase}" HorizontalOptions="CenterAndExpand" TextColor="Black" />
+                                            <Label Grid.Row="2" Text="{Binding PhoneticPhrase}" HorizontalOptions="CenterAndExpand" TextColor="Black" />
                                         </Grid>
-                                        </Frame>
+                                    </Frame>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
@@ -72,18 +80,22 @@
             <Image Source="placeBG.jpg" Aspect="AspectFill"/>
             <StackLayout>
                 <Frame Padding="4">
-                  <Label Text="  English  |  Japanese  |   Phonetic   " HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" />
+                    <Grid HeightRequest="30">
+                        <Label Grid.Column="0" Text="English" />
+                        <Label Grid.Column="1"  Text="Japanese" />
+                        <Label Grid.Column="2"  Text="Phonetic" />
+                    </Grid>
                 </Frame>
                 <Grid>
-                    <ListView x:Name="travelPhrases" RowHeight="130">
+                    <ListView x:Name="travelPhrases" HasUnevenRows="True">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <Frame Opacity="0.4" Margin="0,0,0,10">
                                         <Grid>
-                                            <Label Grid.Row="0" Text="{Binding EnglishPhrase}" Font="Bold, Large" HorizontalOptions="CenterAndExpand"   TextColor="Black" />
-                                            <Label Grid.Row="1" Text="{Binding JapanesePhrase}" Font="Bold, Medium" HorizontalOptions="CenterAndExpand"   TextColor="Black" />
-                                            <Label Grid.Row="2" Text="{Binding PhoneticPhrase}" Font="Bold, Medium" HorizontalOptions="CenterAndExpand"   TextColor="Black" />
+                                            <Label Grid.Row="0" Text="{Binding EnglishPhrase}" HorizontalOptions="CenterAndExpand" TextColor="Black" Font="Bold"/>
+                                            <Label Grid.Row="1" Text="{Binding JapanesePhrase}" HorizontalOptions="CenterAndExpand" TextColor="Black" />
+                                            <Label Grid.Row="2" Text="{Binding PhoneticPhrase}" HorizontalOptions="CenterAndExpand" TextColor="Black" />
                                         </Grid>
                                     </Frame>
                                 </ViewCell>

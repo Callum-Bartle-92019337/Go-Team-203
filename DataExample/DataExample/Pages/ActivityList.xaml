@@ -3,49 +3,54 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DataExample.Pages.ActivityList">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Activities" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" />
+        <Grid>
 
-            <!--<Image Source="background.png" 
-                   BackgroundColor="Transparent" 
-                   VerticalOptions="CenterAndExpand" 
-                   HorizontalOptions="CenterAndExpand"/>-->
-            <ListView x:Name="activitiesList" ItemSelected="ActivitiesListView_OnItemSelected" BackgroundColor="Transparent">
-                <ListView.RowHeight>
-                    <OnPlatform x:TypeArguments="x:Int32" Android="136" />
-                </ListView.RowHeight>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid Padding="8">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition>
-                                        <ColumnDefinition.Width>
-                                            <OnPlatform x:TypeArguments="GridLength" Android="144"/>
-                                        </ColumnDefinition.Width>
-                                    </ColumnDefinition>
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Image Source="{Binding Photo}" />
-                                <Grid Grid.Column="1">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="*" />
-                                    </Grid.RowDefinitions>
-                                    <Grid.Padding>
-                                        <OnPlatform x:TypeArguments="Thickness" Android="8,2,0,4" />
-                                    </Grid.Padding>
-                                    <Grid.RowSpacing>
-                                        <OnPlatform x:TypeArguments="x:Double" Android="4" />
-                                    </Grid.RowSpacing>
-                                    <Label Text="{Binding Title}" FontSize="Large" LineBreakMode="WordWrap" />
-                                    <Label Text="{Binding Content}" FontSize="Small" Grid.Row="1" />
-                                </Grid>
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
+            <Image Source="background.png" Aspect="AspectFill"/>
+            <StackLayout>
+                <Label Text="Activities" HorizontalOptions="CenterAndExpand" Font="Italic, Bold, Large" />
+                <Grid>
+                    <ListView x:Name="activitiesList" ItemSelected="ActivitiesListView_OnItemSelected" BackgroundColor="Transparent" Opacity="1">
+                        <ListView.RowHeight>
+                            <OnPlatform x:TypeArguments="x:Int32" Android="136" />
+                        </ListView.RowHeight>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid Padding="8">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition>
+                                                <ColumnDefinition.Width>
+                                                    <OnPlatform x:TypeArguments="GridLength" Android="144"/>
+                                                </ColumnDefinition.Width>
+                                            </ColumnDefinition>
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image Source="{Binding Photo}" />
+                                        <Grid Grid.Column="1">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.Padding>
+                                                <OnPlatform x:TypeArguments="Thickness" Android="8,2,0,4" />
+                                            </Grid.Padding>
+                                            <Grid.RowSpacing>
+                                                <OnPlatform x:TypeArguments="x:Double" Android="4" />
+                                            </Grid.RowSpacing>
+                                            <Frame Opacity="0.6" Padding="0" Margin="0">
+                                                <Label Text="{Binding Title}" FontSize="Large" LineBreakMode="WordWrap" />
+                                            </Frame>
+                                            <Frame Grid.Row="1" Opacity="0.6" Padding="0" Margin="0">
+                                                <Label Text="{Binding Content}" FontSize="Small" />
+                                            </Frame>
+                                        </Grid>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

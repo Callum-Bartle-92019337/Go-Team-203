@@ -4,14 +4,19 @@
              x:Class="DataExample.Pages.ActivityDisplay">
 
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout>
-                <Label Text="{Binding Title}"/>
-                <Image Source="{Binding Photo} " />
-                <Frame Margin="3" Padding="4">
-                    <Label Text="{Binding Content}"/>
-                </Frame>
-            </StackLayout>
-        </ScrollView>
+        <Grid>
+            <Image Source="background.png" Aspect="AspectFill"/>
+            <ScrollView>
+                <StackLayout Opacity="1">
+                    <Frame Margin="2" Padding="2" Opacity="0.6" >
+                        <Label Text="{Binding Title}" Font="Bold, Large"/>
+                    </Frame>
+                    <Image Source="{Binding Photo} " />
+                    <Frame Margin="3" Padding="4" Opacity="0.6" >
+                        <Label Text="{Binding Content}"/>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
