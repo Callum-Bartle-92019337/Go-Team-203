@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using DataExample.DataModel;
+using Java.Lang;
 using Xamarin.Forms;
 
 namespace DataExample.GlobalMethods
@@ -28,13 +30,51 @@ namespace DataExample.GlobalMethods
         //Database stuff
         public Activities Activities { get; set; } = null;
     }
+
     public static class Globals
     {
-
-        public static async void PopAsync_Button(object sender, EventArgs e)
+        public static void DropTables<T>()
         {
-            //Global back button functionality
-            await Application.Current.MainPage.Navigation.PopAsync();
+            //DB Connection
+            var conn = new SQLite.SQLiteConnection(App.DB_PATH);
+            conn.DropTable<T>();
+            conn.Dispose();
+        }
+
+        public static void CreateTables<T>()
+        {
+            //DB Connection
+            var conn = new SQLite.SQLiteConnection(App.DB_PATH);
+            conn.CreateTable<T>();
+            conn.Dispose();
+        }
+
+        //Insert a class object into the DB
+        public static async void InsertIntoTable<T>(T classObject, Page page)
+        {
+            //DB Connection
+            var conn = new SQLite.SQLiteConnection(App.DB_PATH);
+            //Insert row and display if Success
+            if (conn.Insert(classObject) != 0)
+            { await page.DisplayAlert("Success", "", "OK"); }
+            else
+            { await page.DisplayAlert("Failed", "", "OK"); }
+            //Close connection
+            conn.Dispose();
+        }
+
+        //When we click the finalize button
+        public static async void InsertAllIntoTable<T>(List<T> listObject, Page page)
+        {
+            //DB Connection
+            var conn = new SQLite.SQLiteConnection(App.DB_PATH);
+            //Insert row and display if Success
+            if (conn.InsertAll(listObject) != 0)
+            { await page.DisplayAlert("Success", "", "OK"); }
+            else
+            { await page.DisplayAlert("Failed", "", "OK"); }
+            //Close connection
+            conn.Dispose();
         }
     }
 }

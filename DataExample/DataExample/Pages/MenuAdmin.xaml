@@ -5,8 +5,10 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Refresh Phrases DB" Clicked="Phrase_Button_OnClicked"/>
-            <Button Text="Refresh Activities DB" Clicked="Act_Button_OnClicked"/>
+            <Button Text="Add Activity" Clicked="Add_Act_OnClicked"/>
+            <Button Text="Add Phrase" Clicked="Add_Phrase_OnClicked"/>
+            <Button Text="Refresh Phrases DB" Clicked="Refresh_Phrases_OnClicked"/>
+            <Button Text="Refresh Activities DB" Clicked="Refresh_Act_OnClicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

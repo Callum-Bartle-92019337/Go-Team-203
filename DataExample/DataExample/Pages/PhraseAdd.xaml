@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataExample.Pages.PhraseAdd">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Text="Finalise" Clicked="Add_OnClicked"/>
+        <ToolbarItem Order="Primary" Text="Cancel" Clicked="Back_Button"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Picker x:Name="TypeEntry" SelectedIndex="0" Title="Phrase Type" >
+                <Picker.Items>
+                    <x:String>Travel</x:String>
+                    <x:String>Food</x:String>
+                    <x:String>Common</x:String>
+                </Picker.Items>
+            </Picker>
+            <Entry x:Name="EnglishEntry" Placeholder="English Phrase..."/>
+            <Entry x:Name="JapaneseEntry" Placeholder="Japanese Phrase..."/>
+            <Entry x:Name="PhoneticEntry" Placeholder="Phonetic Phrase..."/>
+            <Button Text="Finalise" Clicked="Add_OnClicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

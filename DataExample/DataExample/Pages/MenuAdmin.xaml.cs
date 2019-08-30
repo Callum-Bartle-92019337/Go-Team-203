@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataExample.DataModel;
+using DataExample.GlobalMethods;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,9 +16,6 @@ namespace DataExample.Pages
         public MenuAdmin()
         {
             InitializeComponent();
-            //DropTables();
-            //CreateTables();
-            //FillTables();
         }
 
         protected override void OnAppearing()
@@ -29,107 +27,94 @@ namespace DataExample.Pages
             //BindingContext = App.G;
             //conn.Dispose();
         }
-        static void DropTables<T>()
+
+        private async void Add_Act_OnClicked(object sender, EventArgs e)
         {
-            var conn = new SQLite.SQLiteConnection(App.DB_PATH);
-            conn.DropTable<T>();
-            conn.Dispose();
+            //Simple Navigation
+            await Navigation.PushAsync(new ActivityAdd());
         }
 
-        private static void CreateTables<T>()
+        private async void Add_Phrase_OnClicked(object sender, EventArgs e)
         {
-            var conn = new SQLite.SQLiteConnection(App.DB_PATH);
-            conn.CreateTable<T>();
-            conn.Dispose();
+            //Simple Navigation
+            await Navigation.PushAsync(new PhraseAdd());
         }
 
-        private static void FillTablesPhr()
+        private async void Refresh_Phrases_OnClicked(object sender, EventArgs e)
         {
-            var conn = new SQLite.SQLiteConnection(App.DB_PATH);
-            Phrases phrase;
-            //1
-            phrase = new Phrases()
-            {
-                EnglishPhrase = "Where is the nearest train station?",
-                JapanesePhrase = "最寄りの鉄道駅はどこですか",
-                PhoneticPhrase = "Moyori no tetsudō-eki wa dokodesu ka?",
-                Type = 1
-            };
-            conn.Insert(phrase);
-            //2
-            phrase = new Phrases()
-            {
-                EnglishPhrase = "Where is the help desk?",
-                JapanesePhrase = "ヘルプデスクはどこですか",
-                PhoneticPhrase = "Herupu desuku wa dokodesu ka?",
-                Type = 1
-            };
-            conn.Insert(phrase);
-            //3
-            phrase = new Phrases()
-            {
-                EnglishPhrase = "I want to get to the ----- is it this way?",
-                JapanesePhrase = "---に行きたいのですが、この方法ですか",
-                PhoneticPhrase = "--- ni ikitai nodesuga, kono hōhōdesu ka?",
-                Type = 1
-            };
-            conn.Insert(phrase);
-            //4
-            phrase = new Phrases()
-            {
-                EnglishPhrase = "I would like this one",
-                JapanesePhrase = "これが欲しい",
-                PhoneticPhrase = "Kore ga hoshī",
-                Type = 2
-            };
-            conn.Insert(phrase);
-            //5
-            phrase = new Phrases()
-            {
-                EnglishPhrase = "Hello",
-                JapanesePhrase = "こんにちは",
-                PhoneticPhrase = "Kon'nichiwa",
-                Type = 3
-            };
-            conn.Insert(phrase);
-            conn.Dispose();
+            Globals.DropTables<Phrases>();
+            Globals.CreateTables<Phrases>();
+            Globals.InsertAllIntoTable(GetPhrasesList(), this);
+            await Navigation.PopAsync();
         }
 
-        private static void FillTablesAct(int i)
+        private async void Refresh_Act_OnClicked(object sender, EventArgs e)
+        {
+            Globals.DropTables<Activities>();
+            Globals.CreateTables<Activities>();
+            Globals.InsertAllIntoTable(GetActivitiesList(4), this);
+            await Navigation.PopAsync();
+        }
+
+        private List<Activities> GetActivitiesList(int i)
         {   // A array of Background images  
             string[] backgrounds = { "background.jpg", "commonBG.jpg", "food.jpg", "logo.png",
                 "placeBG.jpg" };
             // Create a Random object  
             Random rand = new Random();
-            var conn = new SQLite.SQLiteConnection(App.DB_PATH);
-            Activities activity;
+            List<Activities> list = new List<Activities>();
             for (int j = 0; j < i; j++)
             {
-                activity = new Activities()
+                list.Add(new Activities()
                 {
                     Title = "Title Text" + rand.Next(100),
                     Content = "Content Text" + rand.Next(100),
                     Photo = backgrounds[rand.Next(backgrounds.Length)]
-                };
-                conn.Insert(activity);
+                });
             }
-            conn.Dispose();
+
+            return list;
         }
 
-        private void Phrase_Button_OnClicked(object sender, EventArgs e)
+        private List<Phrases> GetPhrasesList()
         {
-            DropTables<Phrases>();
-            CreateTables<Phrases>();
-            FillTablesPhr();
-            Navigation.PopAsync();
-        }
-
-        private void Act_Button_OnClicked(object sender, EventArgs e)
-        {
-            DropTables<Activities>();
-            CreateTables<Activities>();
-            FillTablesAct(4);
-            Navigation.PopAsync();
+            List<Phrases> list = new List<Phrases>();
+            list.Add(new Phrases()
+            {
+                EnglishPhrase = "Where is the nearest train station?",
+                JapanesePhrase = "最寄りの鉄道駅はどこですか",
+                PhoneticPhrase = "Moyori no tetsudō-eki wa dokodesu ka?",
+                Type = 1
+            });
+            list.Add(new Phrases()
+            {
+                EnglishPhrase = "Where is the help desk?",
+                JapanesePhrase = "ヘルプデスクはどこですか",
+                PhoneticPhrase = "Herupu desuku wa dokodesu ka?",
+                Type = 1
+            });
+            list.Add(new Phrases()
+            {
+                EnglishPhrase = "I want to get to the ----- is it this way?",
+                JapanesePhrase = "---に行きたいのですが、この方法ですか",
+                PhoneticPhrase = "--- ni ikitai nodesuga, kono hōhōdesu ka?",
+                Type = 1
+            });
+            list.Add(new Phrases()
+            {
+                EnglishPhrase = "I would like this one",
+                JapanesePhrase = "これが欲しい",
+                PhoneticPhrase = "Kore ga hoshī",
+                Type = 2
+            });
+            list.Add(new Phrases()
+            {
+                EnglishPhrase = "Hello",
+                JapanesePhrase = "こんにちは",
+                PhoneticPhrase = "Kon'nichiwa",
+                Type = 3
+            });
+            return list;
         }
     }
 }

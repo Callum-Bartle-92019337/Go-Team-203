@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataExample.Pages.ActivityAdd">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Text="Finalise" Clicked="Add_OnClicked"/>
+        <ToolbarItem Order="Primary" Text="Cancel" Clicked="Back_Button"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="TitleEntry" Placeholder="Activity Title..."/>
+            <Entry x:Name="ContentEntry" Placeholder="Content..."/>
+            <Label Text="Image Link"/>
+            <Entry x:Name="PhotoEntry" Placeholder="URL"/>
+            <Button Text="Finalise" Clicked="Add_OnClicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

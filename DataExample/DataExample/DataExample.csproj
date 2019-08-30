@@ -23,6 +23,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Pages\PhraseAdd.xaml.cs">
+      <DependentUpon>PhraseAdd.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Pages\MenuAdmin.xaml.cs">
       <DependentUpon>MenuAdmin.xaml</DependentUpon>
     </Compile>
@@ -38,14 +41,23 @@
     <Compile Update="Pages\MenuPhrases.xaml.cs">
       <DependentUpon>MenuPhrases.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Pages\ActivityAdd.xaml.cs">
+      <DependentUpon>ActivityAdd.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Pages\PhraseAdd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Pages\MenuHome.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\MenuPhrases.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\ActivityAdd.xaml">
+      <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
 </Project>
