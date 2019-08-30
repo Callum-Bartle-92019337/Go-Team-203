@@ -10,7 +10,9 @@ namespace DataExample.GlobalMethods
         {
             //DB Connection
             var conn = new SQLiteConnection(App.dbPath);
+            //Drop the table we were passed
             conn.DropTable<T>();
+            //Close the DB Connection
             conn.Dispose();
         }
 
@@ -18,7 +20,9 @@ namespace DataExample.GlobalMethods
         {
             //DB Connection
             var conn = new SQLiteConnection(App.dbPath);
+            //Creates the table of type T
             conn.CreateTable<T>();
+            //Close the DB Connection
             conn.Dispose();
         }
 

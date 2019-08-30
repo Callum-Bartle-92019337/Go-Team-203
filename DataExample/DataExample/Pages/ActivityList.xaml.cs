@@ -21,6 +21,7 @@ namespace DataExample.Pages
 
         private void SendDbListToXaml()
         {
+            //Gets the information from the DB and passes it to the xaml
             var conn = new SQLiteConnection(App.dbPath);
             ActivitiesList.ItemsSource = conn.Query<Activities>("SELECT * FROM Activities");
             conn.Dispose();

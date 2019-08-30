@@ -29,6 +29,7 @@ namespace DataExample.Pages
 
         private async void Refresh_Phrases_OnClicked(object sender, EventArgs e)
         {
+            //Reload the tables to default 
             Globals.DropTables<Phrases>();
             Globals.CreateTables<Phrases>();
             Globals.InsertAllIntoTable(GetPhrasesList(), this);
@@ -37,6 +38,7 @@ namespace DataExample.Pages
 
         private async void Refresh_Act_OnClicked(object sender, EventArgs e)
         {
+            //Reload the tables to default 
             Globals.DropTables<Activities>();
             Globals.CreateTables<Activities>();
             Globals.InsertAllIntoTable(GetActivitiesList(), this);

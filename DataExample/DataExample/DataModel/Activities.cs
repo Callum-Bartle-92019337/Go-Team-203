@@ -8,6 +8,6 @@ namespace DataExample.DataModel
 
         public string Title { get; set; } //
         public string Content { get; set; } //
-        public string Photo { get; set; } //
+        public string Photo { get; set; } //URL or file path
     }
 }

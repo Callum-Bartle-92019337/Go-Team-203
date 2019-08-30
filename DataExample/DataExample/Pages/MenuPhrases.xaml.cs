@@ -21,6 +21,7 @@ namespace DataExample.Pages
 
         private void SendDbListToXaml()
         {
+            //Gets the information from the DB and passes it to the xaml
             var conn = new SQLiteConnection(App.dbPath);
             CommonPhrases.ItemsSource = conn.Query<Phrases>("SELECT * FROM Phrases WHERE Type = 3");
             FoodPhrases.ItemsSource = conn.Query<Phrases>("SELECT * FROM Phrases WHERE Type = 2");

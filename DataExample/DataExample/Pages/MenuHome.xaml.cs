@@ -7,12 +7,16 @@ namespace DataExample.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuHome : ContentPage
     {
+        //Setup for admin buttons
         private bool Admin1 { get; set; }
         private bool Admin2 { get; set; }
 
         public MenuHome()
         {
             InitializeComponent();
+            //Setup for admin buttons
+            Admin1 = false;
+            Admin2 = false;
         }
 
         private void Activities_Button_OnClicked(object sender, EventArgs e)
@@ -30,31 +34,36 @@ namespace DataExample.Pages
         private void Admin1_OnClicked(object sender, EventArgs e)
         {
             Admin1 = true;
-            ButtonChecker();
         }
 
 
         private void Admin2_OnClicked(object sender, EventArgs e)
         {
             Admin2 = true;
-            ButtonChecker();
         }
 
         private void Admin1_OnReleased(object sender, EventArgs e)
         {
+            ButtonChecker();
             Admin1 = false;
+            Admin2 = false;
         }
 
         private void Admin2_OnReleased(object sender, EventArgs e)
         {
+            ButtonChecker();
+            Admin1 = false;
             Admin2 = false;
         }
         
         private void ButtonChecker()
         {
+            //If admin buttons are both released go to ADMIN
             if (Admin1 && Admin2)
             {
-            Navigation.PushAsync(new MenuAdmin());
+                Admin1 = false;
+                Admin2 = false;
+                Navigation.PushAsync(new MenuAdmin());
             }
         }
     }
